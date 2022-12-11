@@ -25,7 +25,7 @@ fun MonthView(modifier: Modifier = Modifier, date: LocalDate, days: Int) {
 
         BoxWithConstraints(Modifier.fillMaxSize()) {
             LazyVerticalGrid(columns = GridCells.Fixed(7), userScrollEnabled = false) {
-                items(Array(date.dayOfMonth) { -1 } + Array(days) { it }) {
+                items(Array(date.dayOfMonth) { -1 } + Array(days) { it + 1 }) {
                     Box(
                         modifier = Modifier
                             .width(this@BoxWithConstraints.maxWidth / 7)

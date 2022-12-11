@@ -13,7 +13,7 @@ fun HelloWorld() {
     val listItems = object : List<LocalDate> by ArrayList() {
         val calculated = hashMapOf<Int, LocalDate>()
 
-        override val size: Int = 2000
+        override val size: Int = Int.MAX_VALUE
         override fun get(index: Int): LocalDate {
             return calculated[index] ?: kotlin.run {
                 val zeroDate = Instant.fromEpochMilliseconds(0)
