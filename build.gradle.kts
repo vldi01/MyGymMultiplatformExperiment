@@ -59,7 +59,7 @@ kotlin {
                 implementation(compose.foundation)
                 implementation(compose.material)
                 implementation(compose.runtime)
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
             }
         }
 
@@ -68,7 +68,9 @@ kotlin {
             kotlin.srcDirs("src/jvmMain/kotlin")
             dependencies {
                 implementation("androidx.appcompat:appcompat:1.5.1")
-                implementation("androidx.activity:activity-compose:1.5.0")
+                implementation("androidx.activity:activity-compose:1.6.1")
+
+                implementation("com.google.accompanist:accompanist-insets:0.28.0")
             }
         }
 
@@ -109,7 +111,7 @@ tasks.withType<KotlinCompile> {
 }
 
 android {
-    compileSdk = 32
+    compileSdk = 33
 
     defaultConfig {
         minSdk = 26
